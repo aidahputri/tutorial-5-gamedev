@@ -1,29 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://bo06sxbv5vfye"]
+[gd_scene load_steps=19 format=3 uid="uid://bo06sxbv5vfye"]
 
 [ext_resource type="Script" path="res://scenes/Player.gd" id="1_cj8ru"]
 [ext_resource type="Texture2D" uid="uid://seygvlekgtfv" path="res://assets/Walking_KG_1.png" id="2_uoyxs"]
 [ext_resource type="Texture2D" uid="uid://bgagsj8ooan1v" path="res://assets/Jump_KG_1.png" id="3_iuooo"]
+[ext_resource type="Texture2D" uid="uid://dtw2if2pirjwm" path="res://assets/Idle_KG_1.png" id="4_lqqoi"]
+[ext_resource type="Texture2D" uid="uid://bui6ht7e0hpgb" path="res://assets/Fall_KG_1.png" id="5_l57wj"]
+[ext_resource type="Texture2D" uid="uid://dvwfqx2xt3n1c" path="res://assets/Landing_KG_1.png" id="6_c6utw"]
+[ext_resource type="Texture2D" uid="uid://bxrqvd63efm3e" path="res://assets/Crouching_KG_1.png" id="7_ii4cw"]
+[ext_resource type="Texture2D" uid="uid://cbn6cjestj38" path="res://assets/Dashing_KG_1.png" id="8_34cxg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh05y"]
 size = Vector2(24, 78)
-
-[sub_resource type="Animation" id="Animation_r78ce"]
-resource_name = "walk"
-length = 0.7
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Walk:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 6]
-}
 
 [sub_resource type="Animation" id="Animation_og0f3"]
 length = 0.001
@@ -51,10 +38,71 @@ tracks/1/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Idle:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fall:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Landing:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Crouching:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Dash:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_5qky0"]
 resource_name = "new_animation"
 length = 0.6
+loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -69,10 +117,119 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5, 5]
 }
 
+[sub_resource type="Animation" id="Animation_r78ce"]
+resource_name = "walk"
+length = 0.7
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Walk:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 6]
+}
+
+[sub_resource type="Animation" id="Animation_cke1p"]
+resource_name = "idle"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Idle:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_xlg1x"]
+resource_name = "fall"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fall:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 2]
+}
+
+[sub_resource type="Animation" id="Animation_fsjs0"]
+resource_name = "landing"
+length = 0.1
+step = 0.025
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Landing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.025, 0.05, 0.075, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3]
+}
+
+[sub_resource type="Animation" id="Animation_vqa4y"]
+resource_name = "crouching"
+length = 0.3
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Crouching:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 2]
+}
+
+[sub_resource type="Animation" id="Animation_x5yvv"]
+resource_name = "dash"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dash:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jsy86"]
 _data = {
 "RESET": SubResource("Animation_og0f3"),
+"crouching": SubResource("Animation_vqa4y"),
+"dash": SubResource("Animation_x5yvv"),
+"fall": SubResource("Animation_xlg1x"),
+"idle": SubResource("Animation_cke1p"),
 "jump": SubResource("Animation_5qky0"),
+"landing": SubResource("Animation_fsjs0"),
 "walk": SubResource("Animation_r78ce")
 }
 
@@ -96,3 +253,23 @@ libraries = {
 [node name="Jump" type="Sprite2D" parent="."]
 texture = ExtResource("3_iuooo")
 hframes = 6
+
+[node name="Idle" type="Sprite2D" parent="."]
+texture = ExtResource("4_lqqoi")
+hframes = 4
+
+[node name="Fall" type="Sprite2D" parent="."]
+texture = ExtResource("5_l57wj")
+hframes = 3
+
+[node name="Landing" type="Sprite2D" parent="."]
+texture = ExtResource("6_c6utw")
+hframes = 4
+
+[node name="Crouching" type="Sprite2D" parent="."]
+texture = ExtResource("7_ii4cw")
+hframes = 3
+
+[node name="Dash" type="Sprite2D" parent="."]
+texture = ExtResource("8_34cxg")
+hframes = 4
