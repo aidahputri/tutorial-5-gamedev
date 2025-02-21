@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd5ei274xc52"]
+
+[ext_resource type="Texture2D" uid="uid://disd1wq5t485g" path="res://assets/tile-1.png" id="1_bmjpg"]
+[ext_resource type="Texture2D" uid="uid://dtea0kdighiww" path="res://assets/tile-4.png" id="2_oh4uv"]
+
+[node name="Platform" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bmjpg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(30, 43, 181, 43, 183, -82, 125, -77, 99, -109, -131, -110, -154, -78, -187, -76, -180, 38, -129, 43, -109, 77, 16, 75)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-58, -133)
+scale = Vector2(1.27344, 1.3125)
+texture = ExtResource("2_oh4uv")

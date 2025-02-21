@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2jk0a06xmv72"]
+
+[ext_resource type="Texture2D" uid="uid://b6m38yotqgvkp" path="res://assets/tile-2.png" id="1_pl6jh"]
+[ext_resource type="Texture2D" uid="uid://8gqrodcyb5wk" path="res://assets/tile-3.png" id="2_8fnt4"]
+
+[node name="Platform2" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_pl6jh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-95, -48, 95, -48, 95, -36, 90, -21, 61, -16, 51, 8, 18, 15, -3, 14, -44, 11, -58, -9, -74, -22, -82, -19, -96, -36)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1.5, -64)
+scale = Vector2(0.994792, 1)
+texture = ExtResource("2_8fnt4")

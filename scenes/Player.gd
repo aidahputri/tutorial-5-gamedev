@@ -26,18 +26,15 @@ func _physics_process(delta):
 
 	var speed = walk_speed
 
-	# Jika shift ditekan dan tidak crouching, gunakan dash_speed
 	if Input.is_action_pressed("ui_shift") and not is_crouching:
 		speed = dash_speed
 		is_dashing = true
 	else:
 		is_dashing = false
 
-	# Jika sedang crouching, gunakan crouch_speed
 	if is_crouching:
 		speed = crouch_speed
 
-	# Pergerakan ke kiri
 	if Input.is_action_pressed("ui_left"):
 		velocity.x = -speed
 		flip_sprites(true)
@@ -67,14 +64,12 @@ func _physics_process(delta):
 				set_sprite_visibility("walk")
 				_animation_player.play("walk")
 
-	# Jika tidak bergerak, tetap idle (hanya jika tidak crouching)
 	else:
 		velocity.x = 0
 		if is_on_floor() and not was_in_air and not is_landing and not is_crouching:
 			set_sprite_visibility("idle")
 			_animation_player.play("idle")
 
-	# Crouching (jongkok)
 	if Input.is_action_just_pressed("ui_down") and is_on_floor():
 		if not is_crouching:
 			set_sprite_visibility("crouching")
@@ -86,7 +81,6 @@ func _physics_process(delta):
 		_animation_player.play("idle")
 		is_crouching = false
 
-	# Jumping
 	if is_on_floor():
 		if was_in_air:
 			set_sprite_visibility("landing")

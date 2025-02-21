@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cbn6cjestj38" path="res://assets/Dashing_KG_1.png" id="8_34cxg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uh05y"]
-size = Vector2(24, 78)
+size = Vector2(24, 62)
 
 [sub_resource type="Animation" id="Animation_og0f3"]
 length = 0.001
@@ -234,10 +234,11 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 2
 script = ExtResource("1_cj8ru")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 1)
+position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_uh05y")
 
 [node name="Walk" type="Sprite2D" parent="."]
