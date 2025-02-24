@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dh6eeeiroijl" path="res://assets/Meow-Knight_Idle.png" id="1_udn0g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fn63w"]
-size = Vector2(20, 10)
+size = Vector2(20, 29)
 
 [sub_resource type="Animation" id="Animation_6rcrb"]
 length = 0.001
@@ -44,11 +44,11 @@ _data = {
 "idle": SubResource("Animation_ju5xi")
 }
 
-[node name="Cat" type="CharacterBody2D"]
+[node name="Cat" type="Area2D"]
 script = ExtResource("1_qxjmg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5)
+position = Vector2(0, -14.5)
 shape = SubResource("RectangleShape2D_fn63w")
 
 [node name="Idle" type="Sprite2D" parent="."]
