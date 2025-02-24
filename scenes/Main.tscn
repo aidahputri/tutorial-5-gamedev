@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=8 format=3 uid="uid://dsyfep1odrxje"]
 
 [ext_resource type="PackedScene" uid="uid://cd5ei274xc52" path="res://Platform.tscn" id="1_h7v5i"]
 [ext_resource type="PackedScene" uid="uid://bo06sxbv5vfye" path="res://scenes/Player.tscn" id="2_pa8x7"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c2jk0a06xmv72" path="res://Platform2.tscn" id="4_8x446"]
 [ext_resource type="PackedScene" uid="uid://dktptkneubbuv" path="res://Platform3.tscn" id="5_55278"]
 [ext_resource type="PackedScene" uid="uid://cw0r02nn77tv0" path="res://Platform4.tscn" id="6_f2iwf"]
+[ext_resource type="PackedScene" uid="uid://xub222smu3l5" path="res://Cat.tscn" id="7_a6lov"]
 
 [node name="Root" type="Node2D"]
 
@@ -36,3 +37,6 @@ position = Vector2(761, 454)
 
 [node name="Platform4" parent="." instance=ExtResource("6_f2iwf")]
 position = Vector2(1021, 608)
+
+[node name="Cat" parent="." instance=ExtResource("7_a6lov")]
+position = Vector2(1062, 463)
