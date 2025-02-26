@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsyfep1odrxje"]
+[gd_scene load_steps=13 format=3 uid="uid://dsyfep1odrxje"]
 
 [ext_resource type="PackedScene" uid="uid://cd5ei274xc52" path="res://Platform.tscn" id="1_h7v5i"]
 [ext_resource type="PackedScene" uid="uid://bo06sxbv5vfye" path="res://scenes/Player.tscn" id="2_pa8x7"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://cw0r02nn77tv0" path="res://Platform4.tscn" id="6_f2iwf"]
 [ext_resource type="PackedScene" uid="uid://xub222smu3l5" path="res://Cat.tscn" id="7_a6lov"]
 [ext_resource type="Script" path="res://scenes/DeathArea.gd" id="8_81twm"]
+[ext_resource type="Texture2D" uid="uid://bxe5bmqr088g" path="res://assets/board1.png" id="8_n50fi"]
+[ext_resource type="Texture2D" uid="uid://ddjcxlrjh1ux8" path="res://assets/button.png" id="9_qq5wo"]
+[ext_resource type="FontFile" uid="uid://d1kukatqjsmyy" path="res://assets/04B_30__.TTF" id="9_v63tb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_poi01"]
 size = Vector2(1165, 19)
@@ -54,29 +57,31 @@ offset_right = 723.0
 offset_bottom = 297.0
 color = Color(0, 0, 0, 0.0156863)
 
-[node name="VictoryCard" type="Panel" parent="CanvasGroup" groups=["VictoryCard"]]
+[node name="VictoryCard" type="NinePatchRect" parent="CanvasGroup" groups=["VictoryCard"]]
 visible = false
 offset_left = 440.0
 offset_top = 168.0
 offset_right = 723.0
 offset_bottom = 297.0
+texture = ExtResource("8_n50fi")
 
 [node name="Label" type="Label" parent="CanvasGroup/VictoryCard"]
 layout_mode = 0
-offset_left = 73.0
+offset_left = 28.0
 offset_top = 40.0
-offset_right = 203.0
+offset_right = 253.0
 offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("9_v63tb")
 text = "You got the cat!!!"
 
-[node name="Button" type="Button" parent="CanvasGroup/VictoryCard"]
+[node name="Button" type="TextureButton" parent="CanvasGroup/VictoryCard"]
 layout_mode = 0
 offset_left = 113.0
-offset_top = 80.0
-offset_right = 165.0
-offset_bottom = 100.0
-theme_override_font_sizes/font_size = 8
-text = "Return"
+offset_top = 72.0
+offset_right = 141.0
+offset_bottom = 86.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("9_qq5wo")
 
 [node name="DeathArea" type="Area2D" parent="."]
 script = ExtResource("8_81twm")
