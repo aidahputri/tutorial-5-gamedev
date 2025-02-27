@@ -38,7 +38,7 @@ Dengan menekan tombol **panah bawah**, karakter dapat berjongkok. Saat jongkok, 
 ## 🎨 **Implementasi Pergerakan**  
 - **Double Jump**: Menambahkan kondisi tambahan agar karakter bisa melompat dua kali sebelum menyentuh tanah.  
 - **Dashing**: Menggunakan input **Arrow + Shift** untuk memberikan efek dorongan ke arah tertentu dalam waktu singkat.  
-- **Crouching**: Mengurangi tinggi karakter dan memperlambat kecepatan saat tombol jongkok ditekan.  
+- **Crouching**: Menggunakan Sprite khusus Crouching dan memperlambat kecepatan saat tombol jongkok ditekan.  
 - **Idle, Fall, Landing**: Menggunakan **Sprite2D** dengan **AnimationPlayer** untuk mengganti animasi berdasarkan kondisi karakter.  
 
 ---
