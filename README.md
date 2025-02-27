@@ -14,7 +14,7 @@ Karakter dapat melompat dua kali sebelum menyentuh tanah kembali. Jika pemain me
 Karakter dapat meluncur cepat ke depan dengan menekan **Arrow Kanan/Kiri + Shift**. Dashing memungkinkan pemain menghindari serangan atau mencapai platform yang lebih jauh dalam waktu singkat.  
 
 ### 🛡️ **3️⃣ Crouching**  
-Dengan menekan tombol **panah bawah**, karakter dapat berjongkok untuk melewati area sempit atau menghindari rintangan. Saat jongkok, karakter bergerak lebih lambat.  
+Dengan menekan tombol **panah bawah**, karakter dapat berjongkok. Saat jongkok, karakter bergerak lebih lambat.  
 
 ### 🎭 **4️⃣ Animasi Tambahan**  
 - **Idle**: Animasi diam saat karakter tidak bergerak.  
@@ -39,7 +39,7 @@ Dengan menekan tombol **panah bawah**, karakter dapat berjongkok untuk melewati 
 - **Double Jump**: Menambahkan kondisi tambahan agar karakter bisa melompat dua kali sebelum menyentuh tanah.  
 - **Dashing**: Menggunakan input **Arrow + Shift** untuk memberikan efek dorongan ke arah tertentu dalam waktu singkat.  
 - **Crouching**: Mengurangi tinggi karakter dan memperlambat kecepatan saat tombol jongkok ditekan.  
-- **Idle, Fall, Landing**: Menggunakan **AnimatedSprite2D** untuk mengganti animasi berdasarkan kondisi karakter.  
+- **Idle, Fall, Landing**: Menggunakan **Sprite2D** dengan **AnimationPlayer** untuk mengganti animasi berdasarkan kondisi karakter.  
 
 ---
 
@@ -59,5 +59,3 @@ Background diletakkan menggunakan **TextureRect** dan diatur agar selalu berada 
 ## 🏆 **Referensi**  
 - [Godot 4 Documentation](https://docs.godotengine.org/en/stable/)  
 - [Godot Official Tutorials](https://www.youtube.com/c/GodotEngineOfficial)  
-
-💖 **Terima kasih sudah mencoba game ini!** 🚀  
