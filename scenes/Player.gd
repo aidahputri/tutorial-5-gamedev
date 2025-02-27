@@ -7,6 +7,11 @@ extends CharacterBody2D
 @export var jump_speed = -150
 @export var can_double_jump = false
 
+var was_in_air = false
+var is_landing = false
+var is_crouching = false
+var is_dashing = false
+
 @onready var walk_sprite = $Walk
 @onready var jump_sprite = $Jump
 @onready var idle_sprite = $Idle
@@ -15,11 +20,6 @@ extends CharacterBody2D
 @onready var crouching_sprite = $Crouching
 @onready var dash_sprite = $Dash
 @onready var _animation_player = $AnimationPlayer
-
-var was_in_air = false
-var is_landing = false
-var is_crouching = false
-var is_dashing = false
 
 func _physics_process(delta):
 	velocity.y += delta * gravity
@@ -121,7 +121,7 @@ func set_sprite_visibility(state: String):
 	fall_sprite.visible = false
 	landing_sprite.visible = false
 	crouching_sprite.visible = false
-	dash_sprite.visible = false 
+	dash_sprite.visible = false
 
 	match state:
 		"idle":

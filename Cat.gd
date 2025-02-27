@@ -3,7 +3,7 @@ extends Area2D
 @onready var idle_sprite = $Idle
 @onready var _cat_animation_player = $CatAnimationPlayer
 
-func _process(delta):
+func _process(_delta):
 	_cat_animation_player.play("idle")
 	idle_sprite.flip_h = true
 
@@ -16,7 +16,7 @@ func change_scene(scene_path: String):
 	get_tree().change_scene_to_file(scene_path)
 
 func _on_body_entered(body: Node2D):
-	if body.name == "Player": 
+	if body.name == "Player":
 		print("Reached objective!")
 		call_deferred("show_victory_screen")
 

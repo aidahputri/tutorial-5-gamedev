@@ -21,12 +21,12 @@ repos:
         require_serial: true
         types: [gdscript]
         exclude: ^addons/
-      - id: gdformat
-        name: gdformat
-        description: "gdformat - formatter for GDScript"
-        entry: gdformat
-        language: python
-        language_version: python3
-        require_serial: true
-        types: [gdscript]
-        exclude: ^addons/
+      # - id: gdformat
+      #   name: gdformat
+      #   description: "gdformat - formatter for GDScript"
+      #   entry: gdformat
+      #   language: python
+      #   language_version: python3
+      #   require_serial: true
+      #   types: [gdscript]
+      #   exclude: ^addons/
