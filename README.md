@@ -1,5 +1,5 @@
 # 🏰 **Girl Knight Rescues the Cat** 🏰  
-
+![alt text]({6B8D3366-D54E-46C1-8B39-70B253DF6928}.png)
 Selamat datang di **Girl Knight Rescues the Cat**! 🎮  
 Game platformer ini mengisahkan seorang ksatria wanita pemberani yang harus menyelamatkan seekor kucing dari bahaya. Gunakan berbagai mekanika pergerakan canggih untuk mencapai tujuan dan selesaikan tantangan di sepanjang perjalanan!  
 
