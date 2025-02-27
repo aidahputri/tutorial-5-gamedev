@@ -49,6 +49,7 @@ Background diletakkan menggunakan **TextureRect** dan diatur agar selalu berada 
 ---
 
 ## 🎯 **Tujuan Game**  
+![Win]({F5223EE6-475E-4A39-A721-5A924A073234}.png)
 - Selamatkan kucing dengan mengatasi berbagai rintangan!  
 - Gunakan mekanika pergerakan dengan cermat untuk menyelesaikan tantangan.  
 - Capai kucing di titik akhir level untuk menang!  
