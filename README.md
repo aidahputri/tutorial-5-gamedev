@@ -1,5 +1,5 @@
 # 🏰 **Girl Knight Rescues the Cat** 🏰
-![alt text]({6B8D3366-D54E-46C1-8B39-70B253DF6928}.png)
+![alt text]({7D260E17-4B2C-4883-BBE5-2223CE2493FC}.png)
 Selamat datang di **Girl Knight Rescues the Cat**! 🎮
 Game platformer ini mengisahkan seorang ksatria wanita pemberani yang harus menyelamatkan seekor kucing dari bahaya. Gunakan berbagai mekanika pergerakan canggih untuk mencapai tujuan dan selesaikan tantangan di sepanjang perjalanan!
 
@@ -49,12 +49,20 @@ Background diletakkan menggunakan **TextureRect** dan diatur agar selalu berada 
 ---
 
 ## 🎯 **Tujuan Game**
-![Win]({F5223EE6-475E-4A39-A721-5A924A073234}.png)
+![alt text]({042DD606-FB83-45E8-92DF-40AA9A35DC76}.png)
 - Selamatkan kucing dengan mengatasi berbagai rintangan!
 - Gunakan mekanika pergerakan dengan cermat untuk menyelesaikan tantangan.
 - Capai kucing di titik akhir level untuk menang!
 
 ---
+## 🏆 **Aset**
+- [Cat Sprite](https://toffeecraft.itch.io/cat-pixel-mega-pack)
+- [Girl Knight Sprite](https://jumpbutton.itch.io/girlknightasset)
+- [Background Image](https://theflavare.itch.io/mondstadt-theme-background-pixel-art)
+- [Platform](https://theflavare.itch.io/mondstadt-theme-background-pixel-art)
+- [Walk SFX](https://kenney.nl/assets/rpg-audio)
+- [Rescue Cat Feedback SFX](https://mixkit.co/free-sound-effects/cat/)
+- [Background Music](https://rotemus.itch.io/fantasy-interactive-music-pack)
 
 ## 🏆 **Referensi**
 - [Godot 4 Documentation](https://docs.godotengine.org/en/stable/)
