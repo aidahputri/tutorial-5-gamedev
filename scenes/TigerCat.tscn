@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://b7t1a84orsk4x"]
+
+[ext_resource type="Texture2D" uid="uid://35er3qrc1m58" path="res://assets/TigerCatFree/IdleCatt.png" id="1_l5pm7"]
+[ext_resource type="Script" path="res://Cat.gd" id="1_ryfxg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_783pc"]
+size = Vector2(20, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clrsh"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4oup1"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rc5p"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkwy"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2urmb"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7te0"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht8gb"]
+atlas = ExtResource("1_l5pm7")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_352vu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clrsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4oup1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rc5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2urmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7te0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht8gb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 14.0
+}]
+
+[node name="TigerCat" type="Area2D"]
+script = ExtResource("1_ryfxg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_783pc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_352vu")
+animation = &"idle"
+autoplay = "idle"
